@@ -1,0 +1,39 @@
+uuid: 77c9103c-7f63-4032-8293-a44aa06720fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.what_we_offer_block
+    - field.storage.block_content.field_node_refer_in_block
+    - node.type.article
+    - node.type.capabilities
+    - node.type.insights
+    - node.type.new_cont_type
+    - node.type.page
+  module:
+    - entity_reference_revisions
+id: block_content.what_we_offer_block.field_node_refer_in_block
+field_name: field_node_refer_in_block
+entity_type: block_content
+bundle: what_we_offer_block
+label: 'node refer in block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+      page: page
+      capabilities: capabilities
+      insights: insights
+      new_cont_type: new_cont_type
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: article
+field_type: entity_reference_revisions

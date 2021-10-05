@@ -1,0 +1,22 @@
+uuid: bf8f9eef-bd84-4b95-bd8b-c0308432795c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - indegene
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: indegene_local_tasks
+theme: indegene
+region: content
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

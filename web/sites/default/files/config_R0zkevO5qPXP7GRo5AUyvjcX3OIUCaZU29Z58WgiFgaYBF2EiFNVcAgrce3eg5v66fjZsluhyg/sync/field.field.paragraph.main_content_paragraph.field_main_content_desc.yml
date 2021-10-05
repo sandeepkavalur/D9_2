@@ -1,0 +1,21 @@
+uuid: 82154090-c51b-4c29-8793-f435e08e2744
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_main_content_desc
+    - paragraphs.paragraphs_type.main_content_paragraph
+  module:
+    - text
+id: paragraph.main_content_paragraph.field_main_content_desc
+field_name: field_main_content_desc
+entity_type: paragraph
+bundle: main_content_paragraph
+label: 'main content desc'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

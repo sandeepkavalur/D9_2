@@ -1,0 +1,39 @@
+uuid: 43d4d8ef-6982-43c9-b91d-181a3d8d22a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.insights.body
+    - field.field.node.insights.field_insig_refer
+    - node.type.insights
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.insights.default
+targetEntityType: node
+bundle: insights
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_insig_refer:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

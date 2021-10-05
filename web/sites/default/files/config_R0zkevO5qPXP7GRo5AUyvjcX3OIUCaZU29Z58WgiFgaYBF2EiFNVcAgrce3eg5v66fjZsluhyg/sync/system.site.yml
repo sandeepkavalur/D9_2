@@ -1,0 +1,14 @@
+uuid: 3bb5d6f1-d0e9-491b-b88f-f864f400f3cf
+name: d9_2
+mail: d9_2@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

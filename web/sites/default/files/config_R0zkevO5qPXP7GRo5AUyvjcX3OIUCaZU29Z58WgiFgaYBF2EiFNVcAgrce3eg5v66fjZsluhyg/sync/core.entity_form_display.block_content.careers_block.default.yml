@@ -1,0 +1,47 @@
+uuid: b1629555-f483-4144-9c6c-9a95548f96fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careers_block
+    - field.field.block_content.careers_block.body
+    - field.field.block_content.careers_block.field_careers_paragraph_refer
+  module:
+    - paragraphs
+    - text
+id: block_content.careers_block.default
+targetEntityType: block_content
+bundle: careers_block
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_careers_paragraph_refer:
+    type: entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

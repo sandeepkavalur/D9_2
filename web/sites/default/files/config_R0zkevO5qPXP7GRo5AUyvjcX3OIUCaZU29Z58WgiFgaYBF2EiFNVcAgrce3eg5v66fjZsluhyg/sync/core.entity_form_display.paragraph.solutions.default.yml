@@ -1,0 +1,36 @@
+uuid: 8cea02f6-b24a-4eb8-a8e8-916a1d2ca28e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.solutions.field_solution_node_refer
+    - field.field.paragraph.solutions.field_solutions_link
+    - paragraphs.paragraphs_type.solutions
+  module:
+    - link
+id: paragraph.solutions.default
+targetEntityType: paragraph
+bundle: solutions
+mode: default
+content:
+  field_solution_node_refer:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_solutions_link:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true

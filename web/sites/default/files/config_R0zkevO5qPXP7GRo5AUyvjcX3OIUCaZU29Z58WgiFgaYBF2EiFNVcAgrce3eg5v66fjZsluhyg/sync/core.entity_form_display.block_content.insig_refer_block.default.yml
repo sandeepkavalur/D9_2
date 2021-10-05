@@ -1,0 +1,47 @@
+uuid: 4d33c8d0-0415-4b17-b955-77764512b6f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.insig_refer_block
+    - field.field.block_content.insig_refer_block.body
+    - field.field.block_content.insig_refer_block.field_insig_refer_parag
+  module:
+    - paragraphs
+    - text
+id: block_content.insig_refer_block.default
+targetEntityType: block_content
+bundle: insig_refer_block
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_insig_refer_parag:
+    type: entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

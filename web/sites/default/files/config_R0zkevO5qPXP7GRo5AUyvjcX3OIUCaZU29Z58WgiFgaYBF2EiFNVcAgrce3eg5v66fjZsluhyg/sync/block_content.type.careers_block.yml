@@ -1,0 +1,8 @@
+uuid: 9418a1f9-3129-4531-9aac-814d602f5510
+langcode: en
+status: true
+dependencies: {  }
+id: careers_block
+label: 'careers block'
+revision: 1
+description: ''

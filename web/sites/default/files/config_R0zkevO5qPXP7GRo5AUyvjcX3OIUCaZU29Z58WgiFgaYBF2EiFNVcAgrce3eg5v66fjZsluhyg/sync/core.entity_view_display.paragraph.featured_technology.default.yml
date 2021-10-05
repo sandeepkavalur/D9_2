@@ -1,0 +1,27 @@
+uuid: 6c0aa978-4de3-4e47-a286-6078fa62bb2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_technology.field_featured_links
+    - paragraphs.paragraphs_type.featured_technology
+  module:
+    - link
+id: paragraph.featured_technology.default
+targetEntityType: paragraph
+bundle: featured_technology
+mode: default
+content:
+  field_featured_links:
+    weight: 0
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+hidden: {  }

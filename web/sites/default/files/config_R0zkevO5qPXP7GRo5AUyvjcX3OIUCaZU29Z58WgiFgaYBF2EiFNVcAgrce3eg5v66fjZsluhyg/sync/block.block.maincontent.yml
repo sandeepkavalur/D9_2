@@ -1,0 +1,30 @@
+uuid: f9dbc964-4ecb-44f3-90b7-051919daa9fc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:main_content_block:e7d72d5a-d3aa-4e6b-a059-82f8a33a0092'
+  module:
+    - block_content
+    - system
+  theme:
+    - indegene
+id: maincontent
+theme: indegene
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:e7d72d5a-d3aa-4e6b-a059-82f8a33a0092'
+settings:
+  id: 'block_content:e7d72d5a-d3aa-4e6b-a059-82f8a33a0092'
+  label: 'Main Content'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/7
+    negate: false

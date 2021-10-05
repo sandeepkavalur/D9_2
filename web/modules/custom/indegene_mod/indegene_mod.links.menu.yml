@@ -1,0 +1,18 @@
+indegene_mod.newpage:
+  title: 'indegene_mod Stuff'
+  description: 'Link to the page indegene_mod created'
+  route_name: indegene_mod.my_page2
+  weight: 10
+  menu_name: main
+
+indegene_mod.admin_menu:
+  title: 'indegene_mod Config settings'
+  description: 'Link to the indegene_mod Config page'
+  parent: system.admin_config_system
+  route_name: indegene_mod.configsettings
+
+
+
+
+# system.admin_config_development
+# system.admin_structure

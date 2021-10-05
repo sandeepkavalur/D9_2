@@ -1,0 +1,21 @@
+uuid: 59545b7d-161d-4933-b2c2-7bfb15531c36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_new_list
+    - node.type.new_cont_type
+  module:
+    - options
+id: node.new_cont_type.field_new_list
+field_name: field_new_list
+entity_type: node
+bundle: new_cont_type
+label: 'new list'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

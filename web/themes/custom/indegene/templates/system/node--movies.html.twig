@@ -1,0 +1,14 @@
+{% block content %}
+  <h3> {{ content.username }} </h3>
+  <br>
+
+  {% 
+    set myarr = {
+      'first name': 'sandeep',
+      'last name': 'kavalur',
+      'email': '123@mail.com',
+      'type': 'h3'
+    }
+  %}
+  {% include '@indegene/includes/sample.html.twig' with { myarr:myarr } %}
+{% endblock %}

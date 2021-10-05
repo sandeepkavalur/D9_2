@@ -1,0 +1,21 @@
+uuid: 18ef3527-0558-47d1-85d2-35f0bbcad586
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_insights_desc
+    - paragraphs.paragraphs_type.insights
+  module:
+    - text
+id: paragraph.insights.field_insights_desc
+field_name: field_insights_desc
+entity_type: paragraph
+bundle: insights
+label: 'insights desc'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

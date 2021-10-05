@@ -1,0 +1,10 @@
+uuid: 9c45fe03-14de-4ccc-ad4c-514b9f85c0f6
+langcode: en
+status: true
+dependencies: {  }
+id: insights
+label: insights
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

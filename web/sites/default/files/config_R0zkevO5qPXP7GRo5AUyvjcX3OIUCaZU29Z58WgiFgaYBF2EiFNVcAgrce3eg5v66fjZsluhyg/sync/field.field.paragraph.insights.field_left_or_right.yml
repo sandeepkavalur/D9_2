@@ -1,0 +1,23 @@
+uuid: 66ee816e-c6be-49eb-96fd-8dbb3fab5579
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_left_or_right
+    - paragraphs.paragraphs_type.insights
+  module:
+    - options
+id: paragraph.insights.field_left_or_right
+field_name: field_left_or_right
+entity_type: paragraph
+bundle: insights
+label: 'left or right'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

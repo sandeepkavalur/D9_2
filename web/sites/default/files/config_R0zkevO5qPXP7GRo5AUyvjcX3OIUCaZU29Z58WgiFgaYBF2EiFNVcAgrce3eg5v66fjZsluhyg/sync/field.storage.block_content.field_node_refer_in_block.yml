@@ -1,0 +1,21 @@
+uuid: 0219df08-7f65-4cf8-aacd-f4570f3d0eec
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - entity_reference_revisions
+    - node
+id: block_content.field_node_refer_in_block
+field_name: field_node_refer_in_block
+entity_type: block_content
+type: entity_reference_revisions
+settings:
+  target_type: node
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

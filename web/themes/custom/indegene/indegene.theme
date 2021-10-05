@@ -1,0 +1,45 @@
+<?php 
+  function indegene_preprocess_node(&$variables){
+    if ($variables['node']->getType() == 'movies' ){
+      
+      $node = \Drupal::request()->attributes->get('node');
+      $uid = $node->getOwnerId();
+
+      $user = \Drupal\user\Entity\User::load($uid);
+      $username = $user->getDisplayName();
+
+      $variables['content']['username'] = $username;
+    }
+    
+  }
+
+  function indegene_preprocess_page(&$variables){
+    if ( $variables['is_front'] ){
+      $variables['#attached']['library'][] = 'indegene/clock_styling';
+    }
+  }
+
+  function indegene_preprocess_paragraph(&$variables){
+    if ($variables['paragraph']->getType() == 'careers_paragraph' ){
+      $variables['content']['mydate_in_para'] = date('d-m-Y');
+    }
+  }
+
+  function indegene_preprocess_block(&$variables){
+    if (!empty($variables['elements']['#id'])) {
+      if ($variables['elements']['#id'] == 'careersblock') {
+        kint($variables);
+        if($variables['content']){
+          $variables['content']['#my_movie_name'] = 'Inception';
+        }
+      }
+    }
+    
+  }
+
+  function indegene_theme_suggestions_block_alter(&$suggestions, $variables) {
+    $content = $variables['elements']['content'];
+    if (isset($content['#block_content']) && $content['#block_content'] instanceof \Drupal\block_content\BlockContentInterface) {
+      $suggestions[] = 'block__indegene__' . $content['#block_content']->bundle();
+    }
+  }

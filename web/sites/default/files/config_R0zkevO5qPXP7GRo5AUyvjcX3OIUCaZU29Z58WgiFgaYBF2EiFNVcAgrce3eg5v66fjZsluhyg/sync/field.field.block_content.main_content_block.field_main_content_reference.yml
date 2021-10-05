@@ -1,0 +1,46 @@
+uuid: 2dcf9824-31d3-49e6-8c25-d979982626e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.main_content_block
+    - field.storage.block_content.field_main_content_reference
+    - paragraphs.paragraphs_type.main_content_paragraph
+  module:
+    - entity_reference_revisions
+id: block_content.main_content_block.field_main_content_reference
+field_name: field_main_content_reference
+entity_type: block_content
+bundle: main_content_block
+label: 'main content reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      main_content_paragraph: main_content_paragraph
+    target_bundles_drag_drop:
+      banner:
+        weight: 7
+        enabled: false
+      capabilities:
+        weight: 8
+        enabled: false
+      featured_technology:
+        weight: 9
+        enabled: false
+      insights:
+        weight: 10
+        enabled: false
+      main_content_paragraph:
+        enabled: true
+        weight: 11
+      solutions:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

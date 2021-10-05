@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="banner-title">
+      {# {{ kint(content) }} #}
+        <h2> {{ content.field_careers_title[0]['#context'].value}} </h2>
+        <h3> {{ content.mydate_in_para }} </h3>
+        {% for key, item in content.field_careers_links if key|first != '#' %}
+          <div class="item-{{ key + 1 }}">
+            {# {{ kint(item) }} #}
+            <a href="{{ item['#url_title'] }}" >{{ item['#title'] }}</a>
+          </div>
+        {% endfor %}
+    </div>
+    <div class="banner-img">
+        <img src='{{file_url(paragraph.field_careers_img.entity.fileuri)}}' /><br>
+    </div>
+</div>

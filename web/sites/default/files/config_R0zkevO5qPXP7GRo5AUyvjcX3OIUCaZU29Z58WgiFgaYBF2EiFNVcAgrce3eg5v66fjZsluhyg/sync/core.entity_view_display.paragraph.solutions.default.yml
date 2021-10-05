@@ -1,0 +1,36 @@
+uuid: 78046ba0-f0fb-4211-9312-2fb5e02899db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.solutions.field_solution_node_refer
+    - field.field.paragraph.solutions.field_solutions_link
+    - paragraphs.paragraphs_type.solutions
+  module:
+    - link
+id: paragraph.solutions.default
+targetEntityType: paragraph
+bundle: solutions
+mode: default
+content:
+  field_solution_node_refer:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_solutions_link:
+    weight: 0
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+hidden: {  }

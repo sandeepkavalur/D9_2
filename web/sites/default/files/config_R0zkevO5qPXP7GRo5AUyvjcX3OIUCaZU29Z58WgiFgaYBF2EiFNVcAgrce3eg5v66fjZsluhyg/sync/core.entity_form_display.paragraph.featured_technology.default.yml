@@ -1,0 +1,25 @@
+uuid: 538b41a1-c159-4864-beda-84e3b5d8bcb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_technology.field_featured_links
+    - paragraphs.paragraphs_type.featured_technology
+  module:
+    - link
+id: paragraph.featured_technology.default
+targetEntityType: paragraph
+bundle: featured_technology
+mode: default
+content:
+  field_featured_links:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,26 @@
+uuid: e7db0ec2-a5f7-439e-9f60-04a5b9e7b6ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.insig_refer_block
+    - field.field.block_content.insig_refer_block.body
+    - field.field.block_content.insig_refer_block.field_insig_refer_parag
+  module:
+    - entity_reference_revisions
+id: block_content.insig_refer_block.default
+targetEntityType: block_content
+bundle: insig_refer_block
+mode: default
+content:
+  field_insig_refer_parag:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true

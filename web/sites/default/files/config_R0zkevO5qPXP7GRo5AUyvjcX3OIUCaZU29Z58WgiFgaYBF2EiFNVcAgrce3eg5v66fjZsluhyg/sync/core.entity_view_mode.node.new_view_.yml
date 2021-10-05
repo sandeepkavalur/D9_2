@@ -1,0 +1,10 @@
+uuid: 40607adf-e9af-413e-b7b5-7349e9074fb6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.new_view_
+label: 'new view '
+targetEntityType: node
+cache: true

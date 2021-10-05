@@ -1,0 +1,45 @@
+uuid: 7213053e-7787-4de3-ad0e-33206d2152af
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.new_view_
+    - field.field.node.capabilities.body
+    - field.field.node.capabilities.field_capa_refer
+    - node.type.capabilities
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.capabilities.new_view_
+targetEntityType: node
+bundle: capabilities
+mode: new_view_
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_capa_refer:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: paragraph_capability_reference
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

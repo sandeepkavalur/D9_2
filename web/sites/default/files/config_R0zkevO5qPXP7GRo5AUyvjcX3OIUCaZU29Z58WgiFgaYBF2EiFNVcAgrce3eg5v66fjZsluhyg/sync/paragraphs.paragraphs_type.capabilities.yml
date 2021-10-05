@@ -1,0 +1,10 @@
+uuid: 5a653be9-78d2-46b4-ae9e-afa7dd0a8708
+langcode: en
+status: true
+dependencies: {  }
+id: capabilities
+label: capabilities
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

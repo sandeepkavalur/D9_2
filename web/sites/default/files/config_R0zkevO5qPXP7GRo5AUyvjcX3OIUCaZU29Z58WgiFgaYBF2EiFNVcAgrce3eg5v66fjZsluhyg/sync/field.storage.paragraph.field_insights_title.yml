@@ -1,0 +1,20 @@
+uuid: f053b7b5-b4f8-4973-acc7-7111cf2df7a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_insights_title
+field_name: field_insights_title
+entity_type: paragraph
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

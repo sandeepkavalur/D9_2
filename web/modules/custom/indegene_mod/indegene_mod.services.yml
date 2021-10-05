@@ -1,0 +1,9 @@
+services:
+  indegene_mod.route_subscriber:
+    class: Drupal\indegene_mod\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  indegene_mod.barista:
+    class: Drupal\indegene_mod\Service\Barista
+    arguments: ['@database']

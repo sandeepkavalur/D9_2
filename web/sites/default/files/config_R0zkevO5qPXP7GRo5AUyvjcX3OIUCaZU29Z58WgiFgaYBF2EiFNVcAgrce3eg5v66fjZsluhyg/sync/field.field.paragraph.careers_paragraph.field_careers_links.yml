@@ -1,0 +1,23 @@
+uuid: 3e19bfe3-9929-42d4-85b6-81721c191b2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_careers_links
+    - paragraphs.paragraphs_type.careers_paragraph
+  module:
+    - link
+id: paragraph.careers_paragraph.field_careers_links
+field_name: field_careers_links
+entity_type: paragraph
+bundle: careers_paragraph
+label: 'careers links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

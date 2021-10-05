@@ -1,0 +1,27 @@
+{% set side = content.field_left_or_right.0['#markup'] %}
+{# {{ side }} #}
+
+<div class=" insights-cont">
+    {% if side == "left" %}
+        <div class="insights-title-left">
+            <h3> {{ content.field_insights_title[0]['#text']}} </h3>
+            <p> {{ content.field_insights_desc[0]['#text']}} </p>
+            <a href='{{ content.field_learn_more_[0]["#url_title"] }}'> {{ content.field_learn_more_['#title'] }} </a>
+        </div>
+        <div class="insights-img-left">
+            <img src='{{file_url(paragraph.field_insights_img.entity.fileuri)}}' /><br>
+        </div>
+    {% else %}
+        <div class="insights-img-right">
+            <img src='{{file_url(paragraph.field_insights_img.entity.fileuri)}}' /><br>
+        </div>
+        <div class="insights-title-right">
+            <h3> {{ content.field_insights_title[0]['#text']}} </h3>
+            <p> {{ content.field_insights_desc[0]['#text']}} </p>
+            <a href='{{ content.field_learn_more_[0]["#url_title"] }}'> {{ content.field_learn_more_['#title'] }} </a>
+        </div>
+    {% endif %}
+</div>
+
+{# {{ kint(content) }} #}
+{# {{ kint(content.field_left_or_right.0['#markup']) }} #}

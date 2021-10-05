@@ -1,0 +1,8 @@
+uuid: d255edc9-fd88-4b94-8387-74fddc7fe444
+langcode: en
+status: true
+dependencies: {  }
+id: insig_refer_block
+label: 'insig refer block'
+revision: 1
+description: ''

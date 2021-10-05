@@ -1,0 +1,8 @@
+{# {{ kint(content) }} #}
+
+Body: {{ content.body[0] }}<br>
+Link Title: {{ content.field_new_link[0]['#title']}} ----------- Link URL: {{ content.field_new_link[0]['#url_title']}}<br>
+Selected List: {{ content.field_new_list[0] }}<br><br>
+Boolean On or Off: {{ content.field_tic_tac[0]}}<br>
+
+<img src="{{file_url(node.field_new_img.entity.fileuri)}}" /><br>

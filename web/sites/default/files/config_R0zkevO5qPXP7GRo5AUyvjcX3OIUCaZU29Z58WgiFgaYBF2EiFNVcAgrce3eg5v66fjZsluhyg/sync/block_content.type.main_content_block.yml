@@ -1,0 +1,8 @@
+uuid: 5d00849e-e863-4ee5-b961-c06f42024c93
+langcode: en
+status: true
+dependencies: {  }
+id: main_content_block
+label: 'main content block'
+revision: 1
+description: ''

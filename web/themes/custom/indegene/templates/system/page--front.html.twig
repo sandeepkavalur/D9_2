@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Indegene</title>
+</head>
+
+<body>
+<div class="container">
+    <header aria-label="Site header" class="header" id="header" role="banner">
+        {{ page.branding }}
+        {{ page.navigation }}
+        {{ page.search }}
+   </header>
+   <section class="featured" id="featured" role="complementary">
+      {{ page.featured }}
+   </section>
+   <section class="main" id="main">
+      <main aria-label="Site main content" class="content" id="content" role="main">
+
+
+
+
+      {# js clock #}
+      {% block content %}
+  
+        <div id="MyClockDisplay" class="clock" onload="showTime()">hello sandeep!!!</div>
+        
+      {% endblock %}
+
+
+
+
+
+
+      {{ page.content }}
+
+      </main>
+      <aside class="right--sidebar" id="sidebar" role="complementary">
+        {{ page.right_sidebar }}
+      </aside>
+   </section>
+   <footer aria-label="Site footer" class="footer" id="footer" role="contentinfo">
+      <div class="footer--top">
+        {{ page.footer_first }}
+        {{ page.footer_second }}
+        {{ page.footer_third }}
+      </div>
+      <div class="footer--bottom">
+          {{ page.footer_bottom }}
+      </div>
+   </footer>
+</div>
+</body>
+</html>

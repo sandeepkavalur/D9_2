@@ -1,0 +1,31 @@
+uuid: 65eb7c98-6584-474f-8d26-cbfc6a463a0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_refer
+    - node.type.page
+    - paragraphs.paragraphs_type.banner
+  module:
+    - entity_reference_revisions
+id: node.page.field_banner_refer
+field_name: field_banner_refer
+entity_type: node
+bundle: page
+label: 'banner refer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      banner: banner
+    target_bundles_drag_drop:
+      banner:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

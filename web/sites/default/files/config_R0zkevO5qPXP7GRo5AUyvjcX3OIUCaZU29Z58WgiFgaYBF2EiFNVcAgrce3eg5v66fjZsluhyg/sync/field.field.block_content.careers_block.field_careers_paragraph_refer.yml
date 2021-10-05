@@ -1,0 +1,49 @@
+uuid: 08497b62-e737-4e45-be55-ed1f4deea52b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careers_block
+    - field.storage.block_content.field_careers_paragraph_refer
+    - paragraphs.paragraphs_type.careers_paragraph
+  module:
+    - entity_reference_revisions
+id: block_content.careers_block.field_careers_paragraph_refer
+field_name: field_careers_paragraph_refer
+entity_type: block_content
+bundle: careers_block
+label: 'careers paragraph refer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      careers_paragraph: careers_paragraph
+    target_bundles_drag_drop:
+      banner:
+        weight: 8
+        enabled: false
+      capabilities:
+        weight: 9
+        enabled: false
+      careers_paragraph:
+        enabled: true
+        weight: 10
+      featured_technology:
+        weight: 11
+        enabled: false
+      insights:
+        weight: 12
+        enabled: false
+      main_content_paragraph:
+        weight: 13
+        enabled: false
+      solutions:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,37 @@
+uuid: 92b54f81-18ad-4845-962b-b24f831d1871
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.insig_refer_block
+    - field.storage.block_content.field_insig_refer_parag
+    - paragraphs.paragraphs_type.insights
+  module:
+    - entity_reference_revisions
+id: block_content.insig_refer_block.field_insig_refer_parag
+field_name: field_insig_refer_parag
+entity_type: block_content
+bundle: insig_refer_block
+label: 'insig refer parag'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      insights: insights
+    target_bundles_drag_drop:
+      banner:
+        weight: 4
+        enabled: false
+      capabilities:
+        weight: 5
+        enabled: false
+      insights:
+        enabled: true
+        weight: 6
+field_type: entity_reference_revisions

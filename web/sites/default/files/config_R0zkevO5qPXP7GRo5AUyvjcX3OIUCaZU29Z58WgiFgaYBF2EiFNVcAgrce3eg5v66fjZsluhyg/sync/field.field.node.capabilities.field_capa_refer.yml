@@ -1,0 +1,34 @@
+uuid: a8f4dc17-9cba-4645-9ae5-af1c75a4aa3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_capa_refer
+    - node.type.capabilities
+    - paragraphs.paragraphs_type.capabilities
+  module:
+    - entity_reference_revisions
+id: node.capabilities.field_capa_refer
+field_name: field_capa_refer
+entity_type: node
+bundle: capabilities
+label: 'capa refer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      capabilities: capabilities
+    target_bundles_drag_drop:
+      banner:
+        weight: 3
+        enabled: false
+      capabilities:
+        enabled: true
+        weight: 4
+field_type: entity_reference_revisions

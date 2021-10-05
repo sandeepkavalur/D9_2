@@ -1,0 +1,60 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+function indegene_mod_schema(){
+  $db['indegene_mod'] = [
+    'description' => 'storing user data.',
+    'fields' => [
+      'id' => [
+        'description' => 'The primary identifier for the record.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+
+      'candidate_name' => [
+        'description' => 'A field storing text',
+        'type' => 'text',
+        'length' => 50,
+        'not null' => TRUE,
+      ],
+
+      'candidate_mail' => array(
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE,
+      ),
+
+      'candidate_number' => [
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+  return $db;
+}
+
+function indegene_mod_update_9001(&$sandbox){
+  $spec = [
+    'type' => 'varchar',
+    'description' => "New Col",
+    'length' => 50,
+    'not null' => FALSE,
+  ]; 
+  $schema = Database::getConnection()->schema();
+  $schema->addField('indegene_mod', 'candidate_fullname', $spec);
+}
+
+function indegene_mod_update_9002(&$sandbox){
+  $spec = [
+    'type' => 'varchar',
+    'description' => "New Col 2",
+    'length' => 50,
+    'not null' => FALSE,
+  ]; 
+  $schema = Database::getConnection()->schema();
+  $schema->addField('indegene_mod', 'candidate_lastname', $spec);
+}

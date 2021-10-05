@@ -1,0 +1,23 @@
+uuid: 1784f01b-bd0b-418c-9365-0d32ee715af6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tic_tac
+    - node.type.new_cont_type
+id: node.new_cont_type.field_tic_tac
+field_name: field_tic_tac
+entity_type: node
+bundle: new_cont_type
+label: 'tic tac'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

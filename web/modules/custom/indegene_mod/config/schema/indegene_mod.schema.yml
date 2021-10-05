@@ -1,0 +1,35 @@
+indegene_mod.settings:
+  type: config_object
+  mapping:
+    default_value1:
+      type: string
+
+    default_value2:
+      type: string
+
+    default_value3:
+      type: integer
+
+field.field_settings.spacex:
+  type: mapping
+  label: 'Spacex field settings'
+  mapping:
+    size:
+      type: string
+      label: 'Size'
+
+field.widget.settings.spacexwidget:
+  type: mapping
+  label: 'Spacex widget settings'
+  mapping:
+    size:
+      type: integer
+      label: 'Size'
+
+field.formatter.settings.Spacex_default:
+  type: mapping
+  label: 'Spacex_default text length'
+  mapping:
+    text_length:
+      type: string
+      label: 'Text Length'

@@ -1,0 +1,39 @@
+uuid: d89f80c5-5383-4e10-93bf-88ca8e11199e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.capabilities.body
+    - field.field.node.capabilities.field_capa_refer
+    - node.type.capabilities
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.capabilities.default
+targetEntityType: node
+bundle: capabilities
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_capa_refer:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: paragraph_capability_reference
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: 7112676c-49a7-41da-b88b-8d0334868700
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_capa_desc
+    - paragraphs.paragraphs_type.capabilities
+  module:
+    - text
+id: paragraph.capabilities.field_capa_desc
+field_name: field_capa_desc
+entity_type: paragraph
+bundle: capabilities
+label: 'capa desc'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

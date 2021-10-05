@@ -1,0 +1,75 @@
+uuid: 46d44e1d-9c98-49e8-857c-5f4acc7a8486
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.new_cont_type.body
+    - field.field.node.new_cont_type.field_new_img
+    - field.field.node.new_cont_type.field_new_link
+    - field.field.node.new_cont_type.field_new_list
+    - field.field.node.new_cont_type.field_tic_tac
+    - node.type.new_cont_type
+  module:
+    - image
+    - link
+    - options
+    - text
+    - user
+id: node.new_cont_type.teaser
+targetEntityType: node
+bundle: new_cont_type
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 4
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_new_img:
+    type: image
+    weight: 1
+    region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_new_link:
+    type: link
+    weight: 5
+    region: content
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_new_list:
+    type: list_default
+    weight: 2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_tic_tac:
+    type: boolean
+    weight: 3
+    region: content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

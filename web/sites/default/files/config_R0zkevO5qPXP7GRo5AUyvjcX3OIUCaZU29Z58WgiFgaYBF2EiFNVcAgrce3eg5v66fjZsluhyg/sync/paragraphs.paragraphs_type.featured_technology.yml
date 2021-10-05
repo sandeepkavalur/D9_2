@@ -1,0 +1,10 @@
+uuid: 86af386f-6439-4dc4-a05c-62320bafaa5c
+langcode: en
+status: true
+dependencies: {  }
+id: featured_technology
+label: 'featured technology'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

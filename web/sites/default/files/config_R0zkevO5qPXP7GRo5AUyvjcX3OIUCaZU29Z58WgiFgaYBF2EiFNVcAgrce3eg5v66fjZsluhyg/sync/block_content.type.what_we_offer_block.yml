@@ -1,0 +1,8 @@
+uuid: 3293e458-726c-48fd-983e-49f6116f8b98
+langcode: en
+status: true
+dependencies: {  }
+id: what_we_offer_block
+label: 'what we offer block'
+revision: 1
+description: ''

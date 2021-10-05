@@ -1,0 +1,43 @@
+uuid: b1cf0226-5757-4032-9e17-9db5aa2c312b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.what_we_offer_block
+    - field.storage.block_content.field_featured_reference
+    - paragraphs.paragraphs_type.featured_technology
+  module:
+    - entity_reference_revisions
+id: block_content.what_we_offer_block.field_featured_reference
+field_name: field_featured_reference
+entity_type: block_content
+bundle: what_we_offer_block
+label: 'featured reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      featured_technology: featured_technology
+    target_bundles_drag_drop:
+      banner:
+        weight: 6
+        enabled: false
+      capabilities:
+        weight: 7
+        enabled: false
+      featured_technology:
+        enabled: true
+        weight: 8
+      insights:
+        weight: 9
+        enabled: false
+      solutions:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

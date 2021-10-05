@@ -1,0 +1,41 @@
+indegene_mod.my_page:
+  path: '/mypage1/{args}'
+  defaults:
+    _controller: '\Drupal\indegene_mod\Controller\controller1::myPage'
+    _title: 'My first page in D9 using custom module'
+  requirements:
+    _permission: 'access content'
+    _role: 'administrator'
+
+indegene_mod.my_page2:
+  path: '/mypage/page2'
+  defaults:
+    _controller: '\Drupal\indegene_mod\Controller\controller1::myPage2'
+    _title: 'My second page in D9 using custom module'
+  requirements:
+    _permission: 'access content'
+
+indegene_mod.myform:
+  path: '/myform/form1'
+  defaults:
+    _form: '\Drupal\indegene_mod\Form\form1'
+    _title: 'My first form in D9 using custom module'
+  requirements:
+    _permission: 'inde bypass node access'
+
+indegene_mod.configsettings:
+  path: '/admin/config/indegene-settings'
+  defaults:
+    _form: '\Drupal\indegene_mod\Form\IndegeneConfigForm'
+    _title: 'My config form'
+  requirements:
+    _permission: 'access content'
+    _role: 'administrator'
+
+indegene_mod.create_node_batch:
+  path: '/batch/create-node'
+  defaults:
+    _form: '\Drupal\indegene_mod\Form\CreateNodeForm'
+    _title: 'Create Node Batch'
+  requirements:
+    _permission: 'access content'

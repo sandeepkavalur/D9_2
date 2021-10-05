@@ -1,0 +1,10 @@
+uuid: b3a5c8e7-289a-47ae-a0d1-9180eebbc9c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.paragraph_capability_reference
+label: 'paragraph capability reference'
+targetEntityType: paragraph
+cache: true

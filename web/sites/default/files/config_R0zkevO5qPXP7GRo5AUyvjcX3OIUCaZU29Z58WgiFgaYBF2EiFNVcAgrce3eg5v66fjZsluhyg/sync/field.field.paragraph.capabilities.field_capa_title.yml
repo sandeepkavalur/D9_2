@@ -1,0 +1,21 @@
+uuid: 0c5cc4b8-5227-47ac-a75b-89003e128e80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_capa_title
+    - paragraphs.paragraphs_type.capabilities
+  module:
+    - text
+id: paragraph.capabilities.field_capa_title
+field_name: field_capa_title
+entity_type: paragraph
+bundle: capabilities
+label: 'capa title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

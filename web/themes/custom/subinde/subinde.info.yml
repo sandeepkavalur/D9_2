@@ -1,0 +1,24 @@
+name: sub indegene
+type: theme
+description: 'Custom theme of Sub Indegene'
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: indegene
+
+screenshot: screenshot.png
+
+libraries:
+  - indegene/indegene_styling
+  - subinde/subinde_styling
+
+regions:
+  branding: Branding
+  navigation: Main navigation
+  search: Search
+  featured: Featured
+  content: Content
+  right_sidebar: Right sidebar
+  footer_first: Footer First
+  footer_second: Footer Second
+  footer_third: Footer Third
+  footer_bottom: Footer Bottom

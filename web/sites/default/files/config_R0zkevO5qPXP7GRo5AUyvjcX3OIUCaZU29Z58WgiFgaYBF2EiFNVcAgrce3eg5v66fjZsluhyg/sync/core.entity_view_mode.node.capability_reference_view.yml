@@ -1,0 +1,10 @@
+uuid: 349fcb0b-c9e6-44c5-9f4f-7e941adcd34b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.capability_reference_view
+label: 'capability reference view'
+targetEntityType: node
+cache: true

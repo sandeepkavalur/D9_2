@@ -1,0 +1,22 @@
+uuid: dbe55035-e7a6-442f-8f9d-c94fa5fb8a2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - indegene
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: indegene_messages
+theme: indegene
+region: featured
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

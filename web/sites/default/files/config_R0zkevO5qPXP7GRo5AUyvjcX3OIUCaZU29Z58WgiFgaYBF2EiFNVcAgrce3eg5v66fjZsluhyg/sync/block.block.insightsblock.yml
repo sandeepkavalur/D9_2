@@ -1,0 +1,30 @@
+uuid: 789df610-8780-445c-8f89-3dafc88b59bd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:insig_refer_block:19c7f3fd-d8aa-4e9a-b9dc-5f8a1f85a2f2'
+  module:
+    - block_content
+    - system
+  theme:
+    - indegene
+id: insightsblock
+theme: indegene
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:19c7f3fd-d8aa-4e9a-b9dc-5f8a1f85a2f2'
+settings:
+  id: 'block_content:19c7f3fd-d8aa-4e9a-b9dc-5f8a1f85a2f2'
+  label: 'insights block'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/7
+    negate: false

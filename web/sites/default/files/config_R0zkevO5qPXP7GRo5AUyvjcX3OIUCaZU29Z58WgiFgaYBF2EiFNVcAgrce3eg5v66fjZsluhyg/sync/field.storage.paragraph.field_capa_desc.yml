@@ -1,0 +1,19 @@
+uuid: ea9faed8-9f15-4a5b-89c7-ae1a2f2bd60e
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_capa_desc
+field_name: field_capa_desc
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

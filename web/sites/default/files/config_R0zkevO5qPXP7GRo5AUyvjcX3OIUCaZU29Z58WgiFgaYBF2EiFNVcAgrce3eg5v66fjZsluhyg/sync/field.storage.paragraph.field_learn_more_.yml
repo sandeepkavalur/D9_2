@@ -1,0 +1,19 @@
+uuid: 3910b5f9-47c8-4b58-9211-b18dd9ac8fb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_learn_more_
+field_name: field_learn_more_
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

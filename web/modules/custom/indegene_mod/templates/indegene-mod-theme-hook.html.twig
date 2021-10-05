@@ -1,0 +1,17 @@
+<h1>My custom twig template.</h1>
+<p>You passed this text: <b>{{ variable1 }}</b></p>
+<p> {{ date }} </p>
+<p> {{ myusername }} </p>
+<p>And you passed this array:</p>
+
+<ul>
+  {% for item in variable2 %}
+    <li>
+       {{ item }} 
+    </li>        
+  {% endfor %}    
+</ul>
+
+<p>Ciao!</p>
+{{ kint(mynewvar) }}
+{# {{ attach_library('indegene_mod/indegene_mod_styling') }} #}

@@ -1,0 +1,30 @@
+uuid: d0f74c6a-08b8-4a29-beb2-25c7e8f57ed9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:careers_block:d45f0531-c214-4232-a119-ce7bb12e195d'
+  module:
+    - block_content
+    - system
+  theme:
+    - indegene
+id: careersblock
+theme: indegene
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:d45f0531-c214-4232-a119-ce7bb12e195d'
+settings:
+  id: 'block_content:d45f0531-c214-4232-a119-ce7bb12e195d'
+  label: 'Careers Block '
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/7\r\n<front>"
+    negate: false

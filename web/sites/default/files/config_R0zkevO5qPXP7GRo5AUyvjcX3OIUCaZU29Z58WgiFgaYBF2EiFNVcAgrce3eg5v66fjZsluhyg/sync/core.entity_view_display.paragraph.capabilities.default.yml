@@ -1,0 +1,40 @@
+uuid: 734a336a-fd8f-4d8f-9cda-a0aa1913c576
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.capabilities.field_capa_desc
+    - field.field.paragraph.capabilities.field_capa_img
+    - field.field.paragraph.capabilities.field_capa_title
+    - paragraphs.paragraphs_type.capabilities
+  module:
+    - image
+    - text
+id: paragraph.capabilities.default
+targetEntityType: paragraph
+bundle: capabilities
+mode: default
+content:
+  field_capa_desc:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_capa_img:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+  field_capa_title:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

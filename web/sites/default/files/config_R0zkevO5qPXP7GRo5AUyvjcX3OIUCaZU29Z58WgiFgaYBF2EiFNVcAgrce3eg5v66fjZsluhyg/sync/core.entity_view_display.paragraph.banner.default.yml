@@ -1,0 +1,32 @@
+uuid: 07a7996e-513f-4962-9ce3-24d9e2157876
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner.field_banner_img
+    - field.field.paragraph.banner.field_banner_title
+    - paragraphs.paragraphs_type.banner
+  module:
+    - image
+    - text
+id: paragraph.banner.default
+targetEntityType: paragraph
+bundle: banner
+mode: default
+content:
+  field_banner_img:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+  field_banner_title:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

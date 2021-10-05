@@ -1,0 +1,28 @@
+uuid: ec383ba9-9645-4be0-a08e-00dd96bac739
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.main_content_block
+    - field.field.block_content.main_content_block.body
+    - field.field.block_content.main_content_block.field_main_content_reference
+    - field.field.block_content.main_content_block.field_main_content_title
+  module:
+    - entity_reference_revisions
+id: block_content.main_content_block.default
+targetEntityType: block_content
+bundle: main_content_block
+mode: default
+content:
+  field_main_content_reference:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  field_main_content_title: true

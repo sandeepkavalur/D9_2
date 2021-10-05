@@ -1,0 +1,22 @@
+inde bypass node access:
+  title: 'inde Bypass content access control'
+  description: 'View, edit and delete all content regardless of permission restrictions.'
+  restrict access: true
+
+inde administer content types:
+  title: 'inde Administer content types'
+  description: 'Maintain the types of content available and the fields that are associated with those types.'
+  restrict access: true
+
+inde administer nodes:
+  title: 'inde Administer content'
+  description: 'Promote, change ownership, edit revisions, and perform other tasks across all content types.'
+  restrict access: true
+
+inde access content overview:
+  title: 'inde Access the Content overview page'
+
+inde access content:
+  title: 'inde View published content'
+
+# permission_callbacks: - \Drupal\indegene_mod\DynamicPermissions::permissions

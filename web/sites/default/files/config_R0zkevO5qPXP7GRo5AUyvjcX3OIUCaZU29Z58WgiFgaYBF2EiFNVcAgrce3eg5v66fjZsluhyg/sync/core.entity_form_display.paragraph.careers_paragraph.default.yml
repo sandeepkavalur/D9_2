@@ -1,0 +1,45 @@
+uuid: 2d544dd8-490e-4ff8-8ee8-59fda802669f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.careers_paragraph.field_careers_img
+    - field.field.paragraph.careers_paragraph.field_careers_links
+    - field.field.paragraph.careers_paragraph.field_careers_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.careers_paragraph
+  module:
+    - image
+    - link
+id: paragraph.careers_paragraph.default
+targetEntityType: paragraph
+bundle: careers_paragraph
+mode: default
+content:
+  field_careers_img:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_careers_links:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_careers_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

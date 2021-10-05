@@ -1,0 +1,19 @@
+uuid: ded40136-21b3-464e-b576-6b6c342476e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title
+    - node.type.movies
+id: node.movies.field_title
+field_name: field_title
+entity_type: node
+bundle: movies
+label: 'Movies Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

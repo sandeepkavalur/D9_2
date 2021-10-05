@@ -1,0 +1,25 @@
+uuid: 6b0b0579-cb0f-4c6a-8aa5-fddad3b81646
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:new_custom_block:25195bc2-229c-4852-aa86-79e0c3c7c93d'
+  module:
+    - block_content
+  theme:
+    - indegene
+id: newcustomblocktest
+theme: indegene
+region: footer_first
+weight: -7
+provider: null
+plugin: 'block_content:25195bc2-229c-4852-aa86-79e0c3c7c93d'
+settings:
+  id: 'block_content:25195bc2-229c-4852-aa86-79e0c3c7c93d'
+  label: 'new custom block test '
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

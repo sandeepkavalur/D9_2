@@ -1,0 +1,23 @@
+uuid: 1d9d570c-29dd-4d5d-b603-73be263bed2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_solutions_link
+    - paragraphs.paragraphs_type.solutions
+  module:
+    - link
+id: paragraph.solutions.field_solutions_link
+field_name: field_solutions_link
+entity_type: paragraph
+bundle: solutions
+label: 'solutions link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -1,0 +1,26 @@
+uuid: 78126864-79d1-483d-b94a-a9b474dcd917
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.careers_block
+    - field.field.block_content.careers_block.body
+    - field.field.block_content.careers_block.field_careers_paragraph_refer
+  module:
+    - entity_reference_revisions
+id: block_content.careers_block.default
+targetEntityType: block_content
+bundle: careers_block
+mode: default
+content:
+  field_careers_paragraph_refer:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true

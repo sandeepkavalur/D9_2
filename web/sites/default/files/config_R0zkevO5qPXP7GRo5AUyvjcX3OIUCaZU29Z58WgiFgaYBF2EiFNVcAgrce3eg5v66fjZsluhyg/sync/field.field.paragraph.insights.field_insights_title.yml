@@ -1,0 +1,21 @@
+uuid: 7b950130-4611-416e-8327-962a4d2c79b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_insights_title
+    - paragraphs.paragraphs_type.insights
+  module:
+    - text
+id: paragraph.insights.field_insights_title
+field_name: field_insights_title
+entity_type: paragraph
+bundle: insights
+label: 'insights title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

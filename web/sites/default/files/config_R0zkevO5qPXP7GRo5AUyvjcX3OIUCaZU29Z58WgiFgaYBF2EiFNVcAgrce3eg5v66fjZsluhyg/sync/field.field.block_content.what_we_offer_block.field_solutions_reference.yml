@@ -1,0 +1,43 @@
+uuid: db198cfd-d901-4501-8599-7991df2cd0a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.what_we_offer_block
+    - field.storage.block_content.field_solutions_reference
+    - paragraphs.paragraphs_type.solutions
+  module:
+    - entity_reference_revisions
+id: block_content.what_we_offer_block.field_solutions_reference
+field_name: field_solutions_reference
+entity_type: block_content
+bundle: what_we_offer_block
+label: 'solutions reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      solutions: solutions
+    target_bundles_drag_drop:
+      banner:
+        weight: 6
+        enabled: false
+      capabilities:
+        weight: 7
+        enabled: false
+      featured_technology:
+        weight: 8
+        enabled: false
+      insights:
+        weight: 9
+        enabled: false
+      solutions:
+        enabled: true
+        weight: 10
+field_type: entity_reference_revisions

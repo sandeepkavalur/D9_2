@@ -1,0 +1,30 @@
+uuid: 6aaa0297-e45d-420b-a844-3f494d97dce7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_new_list
+field_name: field_new_list
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: myname
+      label: myname
+    -
+      value: myemail
+      label: myemail
+    -
+      value: mydesc
+      label: mydesc
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+uuid: 75d43089-1090-42d2-b8f3-75acb5b48daa
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - indegene
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: indegene_help
+theme: indegene
+region: content
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

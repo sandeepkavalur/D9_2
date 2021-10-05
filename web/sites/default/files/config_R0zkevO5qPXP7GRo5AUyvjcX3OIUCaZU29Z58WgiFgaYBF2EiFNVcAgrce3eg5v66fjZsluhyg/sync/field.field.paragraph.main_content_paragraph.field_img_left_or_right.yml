@@ -1,0 +1,23 @@
+uuid: 5dcd265d-775f-4ce5-b00e-13f9b6fda94a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_img_left_or_right
+    - paragraphs.paragraphs_type.main_content_paragraph
+  module:
+    - options
+id: paragraph.main_content_paragraph.field_img_left_or_right
+field_name: field_img_left_or_right
+entity_type: paragraph
+bundle: main_content_paragraph
+label: 'img left or right'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

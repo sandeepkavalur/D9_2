@@ -1,0 +1,30 @@
+uuid: e486da2d-0c0d-4abb-9bfd-5c057c6fc044
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:what_we_offer_block:3751c60d-578b-4743-a83d-9fbcf6f1aa60'
+  module:
+    - block_content
+    - system
+  theme:
+    - indegene
+id: whatweoffer
+theme: indegene
+region: content
+weight: -4
+provider: null
+plugin: 'block_content:3751c60d-578b-4743-a83d-9fbcf6f1aa60'
+settings:
+  id: 'block_content:3751c60d-578b-4743-a83d-9fbcf6f1aa60'
+  label: 'What we offer '
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/7
+    negate: false

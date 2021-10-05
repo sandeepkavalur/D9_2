@@ -1,0 +1,32 @@
+uuid: d334ee3c-e65a-4fe2-a5fc-8e6797eee323
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.capabilities.body
+    - field.field.node.capabilities.field_capa_refer
+    - node.type.capabilities
+  module:
+    - text
+    - user
+id: node.capabilities.teaser
+targetEntityType: node
+bundle: capabilities
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_capa_refer: true

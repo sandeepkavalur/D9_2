@@ -1,0 +1,28 @@
+uuid: 8cfa7767-476a-4dea-8319-92feef62956c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_learn_more_
+    - paragraphs.paragraphs_type.insights
+  module:
+    - link
+id: paragraph.insights.field_learn_more_
+field_name: field_learn_more_
+entity_type: paragraph
+bundle: insights
+label: 'Learn more >>'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:#'
+    title: 'Learn more'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

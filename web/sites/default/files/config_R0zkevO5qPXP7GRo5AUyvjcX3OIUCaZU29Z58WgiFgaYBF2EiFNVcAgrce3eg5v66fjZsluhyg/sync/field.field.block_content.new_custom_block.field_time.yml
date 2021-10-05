@@ -1,0 +1,21 @@
+uuid: 8f86bb1e-361e-4cf8-80ea-07e7cf93c0a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.new_custom_block
+    - field.storage.block_content.field_time
+id: block_content.new_custom_block.field_time
+field_name: field_time
+entity_type: block_content
+bundle: new_custom_block
+label: time
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1632035705
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

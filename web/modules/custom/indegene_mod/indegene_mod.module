@@ -1,0 +1,107 @@
+<?php
+function indegene_mod_theme($existing, $type, $theme, $path) {
+
+return [
+  // Name of the theme hook. This is used in the controller to trigger the hook.
+  'indegene_mod_theme_hook' => [
+    'render element' => 'children',
+    // If no template name is defined here, it defaults to the name of the theme hook, ie. module-name-theme-hook.html.twig
+    'template' => 'indegene-mod-theme-hook',
+    // Optionally define path to Twig template files. Defaults to the module's ./templates/ directory.
+    'path' => $path . '/templates',
+    // Optionally define variables that will be passed to the Twig template and set default values for them.
+    'variables' => [
+      'variable1' => 'Yet another default text.',
+      'variable2' => [0, 0, 0],
+      'date' => null,
+      'myusername' => null,
+    ],
+  ],
+
+  // Block theme hook. This is used in the controller to trigger the hook.
+  'custom-block' => [
+    'render element' => 'children',
+    // If no template name is defined here, it defaults to the name of the theme hook, ie. module-name-theme-hook.html.twig
+    'template' => 'custom-block',
+    // Optionally define path to Twig template files. Defaults to the module's ./templates/ directory.
+    'path' => $path . '/templates',
+    // Optionally define variables that will be passed to the Twig template and set default values for them.
+    'variables' => [
+      'data' => null,
+    ],
+  ],
+
+  // Form theme hook. This is used in the controller to trigger the hook.
+  'custom-form' => [
+    'render element' => 'form',
+    // If no template name is defined here, it defaults to the name of the theme hook, ie. module-name-theme-hook.html.twig
+    'template' => 'custom-form',
+    // Optionally define path to Twig template files. Defaults to the module's ./templates/ directory.
+    'path' => $path . '/templates',
+    // Optionally define variables that will be passed to the Twig template and set default values for them.
+
+  ],
+
+  // Form theme hook. This is used in the controller to trigger the hook.
+  'custom-config-form' => [
+    'render element' => 'form',
+    // If no template name is defined here, it defaults to the name of the theme hook, ie. module-name-theme-hook.html.twig
+    'template' => 'custom-config-form',
+    // Optionally define path to Twig template files. Defaults to the module's ./templates/ directory.
+    'path' => $path . '/templates',
+    // Optionally define variables that will be passed to the Twig template and set default values for them.
+
+  ],
+];
+
+}
+
+function indegene_mod_preprocess_page(&$variables){
+  $variables['#attached']['library'][] = 'indegene_mod/indegene_mod_styling';
+  $variables['mynewvar'] = 'sandeep';
+
+  if(\Drupal::currentUser()-> hasPermission('inde administer content types')){
+    echo 'I have permission here.';
+  }
+  else{
+    echo 'I don\'t have permission here.';
+  }
+}
+
+function mynewmethod(){
+  $num1 = 5;
+  return $num1;
+}
+
+
+// function indegene_mod_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+//   if($form_id == 'ex81_hello_form'){
+//     $form['accept1'] = array(
+//       '#type' => 'checkbox',
+//       '#title' => t('This is done using form alter'),
+//       '#description' => t('form alter description'),
+//     );
+//   }
+// }
+
+function indegene_mod_form_ex81_hello_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['accept1'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('This is done using form alter form id hook'),
+    '#description' => t('form alter description of form id hook'),
+  );
+
+  $form['actions']['submit']['#submit'][] = 'custom_callback';
+}
+
+function custom_callback() {
+  \Drupal::messenger()->addMessage('Custom callback funtion called here...');
+}
+
+function indegene_mod_block_view_alter(array &$build, \Drupal\Core\Block\BlockPluginInterface $block) {
+
+  // Remove the contextual links on all blocks that provide them.
+  if (isset($build['#contextual_links'])) {
+    unset($build['#contextual_links']);
+  }
+}

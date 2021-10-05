@@ -1,0 +1,23 @@
+uuid: ad9eafcd-4790-4625-9182-62eb0d39c1f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.insights
+  module:
+    - text
+id: node.insights.body
+field_name: body
+entity_type: node
+bundle: insights
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
