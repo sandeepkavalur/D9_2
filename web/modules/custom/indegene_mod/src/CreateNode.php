@@ -9,7 +9,7 @@ use Drupal\user\Entity\User;
 class CreateNode {
 
   public static function createNodeBatch($data, &$context){
-    // kint($data['user']);die;
+    kint($data['user']);die;
     $message = 'Creating Node...';
     $results = array();
 

@@ -10,3 +10,10 @@ config_form_styling:
   css:
     theme:
       css/config_style.css: {}
+
+php_to_js_variable:
+  css:
+    theme:
+      css/php_to_js.css: {}
+  js:
+    js/php_to_js.js: {}

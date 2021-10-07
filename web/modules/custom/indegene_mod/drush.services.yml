@@ -1,0 +1,9 @@
+services:
+  drush9_custom_commands.commands:
+    class: \Drupal\indegene_mod\Commands\Drush9CustomCommands
+    tags:
+      - { name: drush.command }
+  drush9_custom_del.commands:
+    class: \Drupal\indegene_mod\Commands\Drush9DelCmd
+    tags:
+      - { name: drush.command }

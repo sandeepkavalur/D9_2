@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '15ac670d7fdcbdf55b5c6f19c8711f197b5d1c1b',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -376,6 +376,15 @@
                 0 => '9.2.6',
             ),
         ),
+        'drupal/config_update' => array(
+            'pretty_version' => '1.7.0',
+            'version' => '1.7.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/config_update',
+            'aliases' => array(),
+            'reference' => '8.x-1.7',
+            'dev_requirement' => false,
+        ),
         'drupal/contact' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -649,6 +658,15 @@
             'reference' => '8.x-1.9',
             'dev_requirement' => false,
         ),
+        'drupal/features' => array(
+            'pretty_version' => '3.12.0',
+            'version' => '3.12.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/features',
+            'aliases' => array(),
+            'reference' => '8.x-3.12',
+            'dev_requirement' => false,
+        ),
         'drupal/field' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -865,6 +883,15 @@
                 0 => '9.2.6',
             ),
         ),
+        'drupal/queue_ui' => array(
+            'pretty_version' => '2.2.0',
+            'version' => '2.2.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/queue_ui',
+            'aliases' => array(),
+            'reference' => '8.x-2.2',
+            'dev_requirement' => false,
+        ),
         'drupal/quickedit' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -878,12 +905,12 @@
             ),
         ),
         'drupal/recommended-project' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '15ac670d7fdcbdf55b5c6f19c8711f197b5d1c1b',
             'dev_requirement' => false,
         ),
         'drupal/responsive_image' => array(
@@ -1011,6 +1038,15 @@
             'replaced' => array(
                 0 => '9.2.6',
             ),
+        ),
+        'drupal/ultimate_cron' => array(
+            'pretty_version' => '2.0.0-alpha5',
+            'version' => '2.0.0.0-alpha5',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/ultimate_cron',
+            'aliases' => array(),
+            'reference' => '8.x-2.0-alpha5',
+            'dev_requirement' => false,
         ),
         'drupal/update' => array(
             'dev_requirement' => false,

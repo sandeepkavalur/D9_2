@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - article_queue
+title: 'Create Users Queue Worker'
+id: article_queue_worker
+module: indegene_mod
+callback: indegene_mod_cron

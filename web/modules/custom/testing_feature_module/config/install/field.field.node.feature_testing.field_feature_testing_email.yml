@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature_testing_email
+    - node.type.feature_testing
+id: node.feature_testing.field_feature_testing_email
+field_name: field_feature_testing_email
+entity_type: node
+bundle: feature_testing
+label: 'feature testing email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

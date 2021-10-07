@@ -24,10 +24,13 @@
         "drupal/core-project-message": "^9.2",
         "drupal/core-recommended": "^9.2",
         "drupal/devel_kint_extras": "1.0",
+        "drupal/features": "^3.12",
         "drupal/flexslider": "2.0",
         "drupal/paragraphs": "1.12",
+        "drupal/queue_ui": "^2.2",
         "drupal/rest_api_access_token": "1.6",
         "drupal/restui": "1.20",
+        "drupal/ultimate_cron": "^2.0@alpha",
         "drupal/views_bootstrap": "3.7",
         "drush/drush": "^10.6",
         "squizlabs/php_codesniffer": "2.9.1"

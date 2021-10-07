@@ -1,4 +1,13 @@
 <?php
+
+use Drupal\Core\Entity;
+use Drupal\node\Entity\Node;
+use Drupal\user\Entity\User;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\FieldableEntityInterface;
+
+// require \Drupal::root() . '\modules\custom\indegene_mod\users.csv';
+
 function indegene_mod_theme($existing, $type, $theme, $path) {
 
 return [
@@ -98,10 +107,111 @@ function custom_callback() {
   \Drupal::messenger()->addMessage('Custom callback funtion called here...');
 }
 
-function indegene_mod_block_view_alter(array &$build, \Drupal\Core\Block\BlockPluginInterface $block) {
+// function indegene_mod_block_view_alter(array &$build, \Drupal\Core\Block\BlockPluginInterface $block) {
 
-  // Remove the contextual links on all blocks that provide them.
-  if (isset($build['#contextual_links'])) {
-    unset($build['#contextual_links']);
+//   // Remove the contextual links on all blocks that provide them.
+//   if (isset($build['#contextual_links'])) {
+//     unset($build['#contextual_links']);
+//   }
+// }
+
+
+/**
+ * Implements hook_cron().
+ */
+function indegene_mod_cron() {
+
+  $handle = fopen(\Drupal::root() . '\modules\custom\indegene_mod\3users.csv', 'r');
+  $key = 0;
+  $data = [];
+
+  while(($row = fgetcsv($handle, 1000, ',')) !== false) {
+    if(user_load_by_mail($row[5])){
+      continue;
+    }
+    else {
+      $data['user'][$key]['FirstName'] = $row[0];
+      $data['user'][$key]['LastName'] = $row[1];
+      $data['user'][$key]['UserName'] = $row[2];
+      $data['user'][$key]['Gender'] = $row[3];
+      $data['user'][$key]['Role'] = $row[4];
+      $data['user'][$key]['Email'] = $row[5];
+      $data['user'][$key]['Password'] = $row[6];
+      $key++;
+    }
+  }
+
+  // Get queue.
+  // $queue = \Drupal::queue('indegene_mod_queue');
+  $queue_factory = \Drupal::service('queue');
+  $queue = $queue_factory->get('indegene_mod_queue');
+
+  // Create item to queue.
+  foreach($data['user'] as $key => $val){
+    $queue->createItem($val);
+  }
+
+
+  // create users programmatically
+  // foreach($data['user'] as $key => $val){
+  //   // Create user object.
+  //   $user = User::create();
+
+  //   //Mandatory settings
+  //   $user->setPassword($val['Password']);
+  //   $user->enforceIsNew();
+  //   $user->setEmail($val['Email']);
+  //   $user->setUsername($val['UserName']); //This username must be unique and accept only a-Z,0-9, - _ @ .
+  //   $user->addRole($val['Role']); //E.g: authenticated
+  //   //custom fields
+  //   $user->set("field_first_name", $val['FirstName']);
+  //   $user->set("field_last_name", $val['LastName']);
+  //   $user->set("field_gender", $val['Gender']);
+
+  //   $user->activate();
+  //   $results[] = $user->save();
+  // }
+
+
+  //create users using batch
+  // $batch = array(
+  //   'title' => t('Creating Node...'),
+  //   'operations' => array(
+  //     array(
+  //       '\Drupal\indegene_mod\CreateNode::createNodeBatch',
+  //       [$data]
+  //     ),
+  //   ),
+  //   'finished' => '\Drupal\indegene_mod\CreateNode::createNodeBatchFinishedCallback',
+  // );
+
+  // batch_set($batch);
+}
+
+
+function indegene_mod_entity_presave(EntityInterface $entity){
+  if($entity->getEntityTypeId() == 'node' && ($entity->bundle() == 'movies')) {
+    if($entity->field_article_refer){
+      $reference_entity = $entity->field_article_refer->first();
+      if(isset($reference_entity)){
+        $article_node_id = $entity->field_article_refer->first()->getValue()['target_id'];
+        $article_data = Node::load($article_node_id);
+        $arti_img_url = $article_data->field_image->entity->getFileUri();
+        $arti_img = $article_data->field_image;
+      }
+    }
+    // if($entity->field_get_img){
+    //   kint($entity->field_get_img->fileuri());die;
+    // }
+    if($entity->field_get_img_non_media){
+      $entity->field_get_img_non_media = $arti_img->first()->getValue();
+    }
+  }
+}
+
+function indegene_mod_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if($form_id == 'node_movies_edit_form' || $form_id == 'node_movies_add_form'){
+    $form['#attached']['library'][] = 'indegene_mod/php_to_js_variable';
+    $form['#attached']['drupalSettings']['dummy_data'][] = ['first_name' => 'sandeep', 'last_name' => 'kavalur'];
   }
 }

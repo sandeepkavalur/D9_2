@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.feature_testing.body
+    - field.field.node.feature_testing.field_feature_testing_email
+    - node.type.feature_testing
+  module:
+    - text
+    - user
+id: node.feature_testing.default
+targetEntityType: node
+bundle: feature_testing
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_feature_testing_email: true
